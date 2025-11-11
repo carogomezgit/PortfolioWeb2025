@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio-service';
 import { CommonModule } from '@angular/common';
+import { Proyectos } from '../../modules/proyectos';
 
 @Component({
   selector: 'app-mis-proyectos',
@@ -11,9 +12,7 @@ import { CommonModule } from '@angular/common';
 
 export class MisProyectos implements OnInit{
 
-  
-
-  proyectos: MisProyectos[] = [];
+  proyectos: Proyectos[] | undefined;
   cargando = true; // indicador de carga
   error: string | null = null; // para manejar errores
 
@@ -24,7 +23,7 @@ export class MisProyectos implements OnInit{
   // llamo al metodo obtenerProyectos del servicio para obtener los proyectos
     this.portfolioService.obtenerProyectos().subscribe({
       next: (data) => {
-      
+
         this.proyectos = data;
         this.cargando = false;
       },

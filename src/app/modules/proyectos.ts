@@ -1,4 +1,4 @@
-export interface MisProyectos {
+export interface Proyectos {
     id: number;
     proyecto: string;
     descripcion: string;

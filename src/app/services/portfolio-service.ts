@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../../environments/environment.development';
-import { SobreMi } from '../features/sobre-mi/sobre-mi';
-import { MisProyectos } from '../features/mis-proyectos/mis-proyectos';
+import { DatosPersonales } from '../modules/datos-personales';
+import { Proyectos } from '../modules/proyectos';
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +13,8 @@ export class PortfolioService {
   constructor(private http: HttpClient) {}
 
   // metodo para obtener informacion desde el archivo JSON
-  obtenerInformacion(): Observable<SobreMi[]> {
-    return this.http.get<SobreMi[]>(environment.informacionUrl)
+  obtenerInformacion(): Observable<DatosPersonales> {
+    return this.http.get<DatosPersonales>(environment.informacionUrl)
       .pipe(
         catchError((error: any) => {
           console.error('Error al cargar el archivo JSON', error);
@@ -24,8 +24,8 @@ export class PortfolioService {
   }
 
   // metodo para obtener proyectos desde el archivo JSON
-  obtenerProyectos(): Observable<MisProyectos[]> {
-    return this.http.get<MisProyectos[]>(environment.proyectosUrl)
+  obtenerProyectos(): Observable<Proyectos[]> {
+    return this.http.get<Proyectos[]>(environment.proyectosUrl)
       .pipe(
         catchError((error: any) => {
           console.error('Error al cargar el archivo JSON', error);

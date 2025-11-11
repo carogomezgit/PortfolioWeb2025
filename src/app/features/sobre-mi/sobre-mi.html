@@ -1,1 +1,18 @@
-<p>sobre-mi works!</p>
+@if (cargando) {
+  <p>Cargando información...</p>
+} @else if (error) {
+  <p class="text-danger">{{ error }}</p>
+} @else if (datos) {
+  <h1>Sobre Mí</h1>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ datos.nombre }} {{ datos.apellido }}</h5>
+      <p class="card-text">{{ datos.titulo }} en {{ datos.institucion }}</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Edad: {{ datos.edad }}</li>
+        <li class="list-group-item">Email: {{ datos.email }}</li>
+        <li class="list-group-item">GitHub: <a [href]="datos.github" target="_blank">{{ datos.github }}</a></li>
+      </ul>
+    </div>
+  </div>
+}
