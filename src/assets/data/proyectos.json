@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "proyecto": "DrawIt!",
+    "descripcion": "Aplicación CRUD con Java y JSP.",
+    "tecnologias": ["Java", "Spring", "MySQL", "HTML", "Bootstrap"],
+    "linkRepositorio": "https://github.com/carogomezgit/ProyectoDrawIt.git",
+	  "asignatura": "Programación I",
+    "docente": "Casali, Analía"
+
+},
+  {
+    "id": 2,
+    "nombre": "Portfolio Web Angular",
+    "descripcion": "Sitio web personal desarrollado con Angular 20.",
+    "tecnologias": ["Angular", "TypeScript", "CSS"],
+    "linkRepositorio": "https://github.com/carogomezgit/PortfolioWeb2025.git",
+	  "asignatura": "Programación I",
+	  "docente": "Casali, Analía"
+  }
+]

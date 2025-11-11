@@ -1,1 +1,8 @@
-<p>mis-proyectos works!</p>
+<h1>Mis Proyectos</h1>
+<p>Lista de todos proyectos desarrollados durante mi segundo año de cursado en la Tecnicatura Superior en Desarrollo de Software, año 2025</p>
+
+<ul>
+    @for (p of proyectos; track p.id) {
+    <li>{{ p.proyecto }} - ({{p.linkRepositorio}})</li>
+    }
+</ul>
