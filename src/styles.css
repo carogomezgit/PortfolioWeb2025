@@ -1,2 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --bs-primary: #FF6600;
+  --bs-primary-rgb: 255, 102, 0;
+  --bs-dark: #212529;
+  --bs-light: #F8F9FA;
+}
+
+body {
+  background-color: var(--bs-light); 
+  color: var(--bs-dark);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #E65C00;
+  --bs-btn-hover-border-color: #E65C00;
+  --bs-btn-active-bg: #E65C00;
+  --bs-btn-active-border-color: #E65C00;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--bs-primary) !important; 
+  font-weight: 600;
+}
+
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E65C00;
+  text-decoration: underline;
+}

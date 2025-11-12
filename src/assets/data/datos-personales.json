@@ -5,9 +5,9 @@
   "edad": 23,
   "titulo": "Estudiante de Desarrollo de Software",
   "institucion": "IES 63",
-  "descripcion": "....",
+  "descripcion": "....", 
   "foto": "assets/img/foto-perfil.jpg",
-  "email": "aragomezgd@example.com",
+  "email": "aragomez@gmail.com",
   "telefono": "+54 9 3482 215323",
   "github": "https://github.com/carogomezgit"
 }

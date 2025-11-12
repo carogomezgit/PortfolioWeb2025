@@ -1,41 +1,33 @@
-<div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container-fluid px-0">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container"> <a class="navbar-brand" routerLink="/">Mi Portfolio Web</a>
 
-    <a class="navbar-brand" routerLink="/">Mi Portfolio Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-    <div class="collapse navbar-collapse" id="menuNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/">Inicio</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/sobremi" routerLinkActive="active">Sobre Mí</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/sobremi" routerLinkActive="active">Sobre Mí (activo)</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/proyectos" routerLinkActive="active">Mis Proyectos</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/sobremi']">Sobre Mí</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+          </li>
 
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/proyectos">Mis Proyectos</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/contacto">Contacto</a>
-        </li>
-
-      </ul>
+        </ul>
+      </div>
     </div>
-
-</nav>
-
-<h1>{{titulo}} </h1>
-<p>@<i class="fa fa-copyright" aria-hidden="true"></i></p>
-
-</div>
+  </nav>
+  
+  </div>

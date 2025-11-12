@@ -1,18 +1,36 @@
 @if (cargando) {
-  <p>Cargando información...</p>
+  <p class="text-center mt-5">Cargando información...</p>
 } @else if (error) {
-  <p class="text-danger">{{ error }}</p>
+  <p class="alert alert-danger">{{ error }}</p>
 } @else if (datos) {
-  <h1>Sobre Mí</h1>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{ datos.nombre }} {{ datos.apellido }}</h5>
-      <p class="card-text">{{ datos.titulo }} en {{ datos.institucion }}</p>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Edad: {{ datos.edad }}</li>
-        <li class="list-group-item">Email: {{ datos.email }}</li>
-        <li class="list-group-item">GitHub: <a [href]="datos.github" target="_blank">{{ datos.github }}</a></li>
-      </ul>
+
+<div class="container my-5">
+    <div class="row align-items-center">
+
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <img [src]="datos.foto" 
+             alt="Foto de {{ datos.nombre }} {{ datos.apellido }}" 
+             class="img-fluid rounded-circle shadow" 
+             style="max-width: 280px; border: 6px solid var(--bs-primary);">
+        </div>
+
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold">{{ datos.nombre }} {{ datos.apellido }}</h1>
+            <h2 class_alias="h4 text-muted mb-4">{{ datos.titulo }} en {{ datos.institucion }}</h2>
+        
+        <p class="lead">{{ datos.descripcion }}</p>
+            <ul class="list-unstyled mt-4" style="font-size: 1.1rem;">
+                <li class="mb-2">
+                    <strong>Edad:</strong> {{ datos.edad }} años
+                </li>
+                <li class="mb-2">
+                    <strong>Email:</strong> {{ datos.email }}
+                </li>
+                <li class="mb-2">
+                    <strong>Teléfono:</strong> {{ datos.telefono }}
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
+</div>
 }

@@ -1,1 +1,36 @@
-<p>contacto works!</p>
+<div class="container my-5">
+    <div class="text-center mb-5">
+
+        <h1>Contacto</h1>
+      
+        @if (cargando) {
+            <p class="lead text-muted mb-4">Cargando...</p>
+        } @else if (error) {
+            <p class="alert alert-danger">{{ error }}</p>
+        } @else if (datos) {
+            <p class="lead text-muted mb-4">
+                Podés contactarme por medio de las siguientes plataformas.
+            </p>
+            
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a [href]="datos.github" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                </li>
+            
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/tu-usuario-linkedin/" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin fa-3x"></i>
+                    </a>
+                </li>
+            
+                <li class="list-inline-item">
+                    <a [href]="'mailto:' + datos.email" class="social-icon" title="Enviar Email">
+                        <i class="fas fa-envelope fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+        }
+    </div>
+</div>
