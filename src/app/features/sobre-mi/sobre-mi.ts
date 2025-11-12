@@ -12,7 +12,20 @@ import { RouterLink } from "@angular/router";
 })
 export class SobreMi implements OnInit {
   
-  datos: DatosPersonales | undefined;
+  datos: DatosPersonales = {
+    nombre: '',
+    apellido: '',
+    edad: 0,
+    titulo: '',
+    institucion: '',
+    descripcion: '',
+    foto: '',
+    email: '',
+    telefono: '',
+    github: '',
+    fotoCarrera: '',
+    fotoInstituto: ''
+  }
   cargando = true;
   error: string | null = null;
 
