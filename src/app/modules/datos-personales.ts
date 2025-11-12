@@ -9,4 +9,6 @@ export interface DatosPersonales {
     email: string;
     telefono: string;
     github: string;
+    fotoCarrera: string;
+    fotoInstituto: string;
 }

@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio-service';
 import { DatosPersonales } from '../../modules/datos-personales';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-sobre-mi',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './sobre-mi.html',
   styleUrl: './sobre-mi.css',
 })

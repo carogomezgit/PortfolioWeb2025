@@ -1,7 +1,7 @@
 @if (cargando) {
-  <p class="text-center mt-5">Cargando información...</p>
+    <p class="text-center mt-5">Cargando información...</p>
 } @else if (error) {
-  <p class="alert alert-danger">{{ error }}</p>
+    <p class="alert alert-danger">{{ error }}</p>
 } @else if (datos) {
 
 <div class="container my-5">
@@ -9,9 +9,9 @@
 
         <div class="col-lg-4 text-center mb-4 mb-lg-0">
         <img [src]="datos.foto" 
-             alt="Foto de {{ datos.nombre }} {{ datos.apellido }}" 
-             class="img-fluid rounded-circle shadow" 
-             style="max-width: 280px; border: 6px solid var(--bs-primary);">
+            alt="Foto de {{ datos.nombre }} {{ datos.apellido }}" 
+            class="img-fluid rounded-circle shadow" 
+            style="max-width: 280px; border: 6px solid var(--bs-primary);">
         </div>
 
         <div class="col-lg-8">
@@ -19,6 +19,7 @@
             <h2 class_alias="h4 text-muted mb-4">{{ datos.titulo }} en {{ datos.institucion }}</h2>
         
         <p class="lead">{{ datos.descripcion }}</p>
+            <a class="btn btn-primary mt-auto" routerLink="/proyectos">Mis Proyectos</a>
             <ul class="list-unstyled mt-4" style="font-size: 1.1rem;">
                 <li class="mb-2">
                     <strong>Edad:</strong> {{ datos.edad }} años
